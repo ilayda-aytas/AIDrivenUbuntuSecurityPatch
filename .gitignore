@@ -1,2 +1,6 @@
 /.idea/*
 .env
+
+/myenv/bin
+/myenv/lib
+/myenv/lib64
