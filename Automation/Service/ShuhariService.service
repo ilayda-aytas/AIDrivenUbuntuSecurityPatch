@@ -1,0 +1,21 @@
+[Unit]
+Description=Shuhari community service trial
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash $HOME/Automation/Service/ShuhariService.sh
+User=root
+Group=root
+WorkingDirectory=$HOME/Automation/Service
+StandardOutput=journal
+StandardError=journal
+Restart=on-failure
+RestartSec=5
+StartLimitIntervalSec=0
+StartLimitBurst=3
+Environment=HOME=$HOME
+
+[Install]
+WantedBy=multi-user.target
+
